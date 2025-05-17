@@ -5,13 +5,13 @@ class CatBlocks {
       name: 'Cat Blocks',
       blocks: [
         {
-          opcode: 'catMeow',
+          opcode: 'meow',
           blockType: Scratch.BlockType.COMMAND,
           text: 'cat meows',
         },
         {
-          opcode: 'catJump',
-          blockType: Scratch.BlockType.MOTION,
+          opcode: 'jump',
+          blockType: Scratch.BlockType.COMMAND,
           text: 'cat jumps [STEPS] steps',
           arguments: {
             STEPS: {
@@ -21,41 +21,32 @@ class CatBlocks {
           }
         },
         {
-          opcode: 'catLook',
+          opcode: 'favColor',
           blockType: Scratch.BlockType.REPORTER,
           text: 'cat\'s favorite color',
         },
         {
-          opcode: 'catQuestion',
+          opcode: 'isHungry',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'is cat hungry?',
-        },
-        {
-          opcode: 'catHat',
-          blockType: Scratch.BlockType.HAT,
-          text: 'when cat wakes up',
-        },
+        }
       ],
     };
   }
 
-  catMeow() {
-    alert("Meow!");
+  meow() {
+    alert('Meow!');
   }
 
-  catJump(args) {
-    console.log(`Cat jumps ${args.STEPS} steps!`);
+  jump(args) {
+    console.log(`Cat jumps ${args.STEPS} steps`);
   }
 
-  catLook() {
-    return "orange";
+  favColor() {
+    return 'orange';
   }
 
-  catQuestion() {
-    return true;
-  }
-
-  catHat() {
+  isHungry() {
     return true;
   }
 }
